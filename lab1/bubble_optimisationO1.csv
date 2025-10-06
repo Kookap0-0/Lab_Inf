@@ -1,0 +1,11 @@
+algorithm,array_size,time_ns
+bubble_sort,1000,632200
+bubble_sort,2000,2089400
+bubble_sort,3000,4543500
+bubble_sort,4000,9282500
+bubble_sort,5000,12792000
+bubble_sort,6000,18413600
+bubble_sort,7000,25748600
+bubble_sort,8000,31282600
+bubble_sort,9000,41387900
+bubble_sort,10000,55540100
