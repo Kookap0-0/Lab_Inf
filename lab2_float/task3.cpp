@@ -1,29 +1,31 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-void binary(unsigned int u) {
-    for (int i = 31; i >= 0; i--) {
-        cout << ((u >> i) & 1);
-        if (i == 31 || i == 23) cout << " ";
-    }
-}
-
-union fu {
-    float f;
-    unsigned int u;
-};
-
 int main() {
-    cout << fixed;
+    cout<<fixed;
     cout.precision(1);
-    fu num;
-    unsigned long long int_number = 1;
-    for (int i = 0; i <= 15; i++) {
-        num.f = (float)int_number;
-        cout << "10^" << i << " = " << num.f << " = ";
-        binary(num.u);
-        cout << endl;
-        int_number *= 10;
+
+    float x = 1.0f;
+    unsigned long long i = 0;
+    while (true) {
+        float next = x + 1.0f;
+
+        if (i>16777200) {
+            cout << "x = " << x << ", x + 1 = " << next;
+            cout << ", разница = " << (next - x) << endl;
+        }
+
+        if (next == x) {
+            cout << "x = " << x << endl;
+            cout << "x + 1 = " << next << endl;
+            cout << "Прибавление 1 не изменяет значение!" << endl;
+            break;
+            
+        }
+
+        x += 1.0f;
+        i+=1;
     }
     
     return 0;
