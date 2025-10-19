@@ -85,5 +85,5 @@ plt.subplots_adjust(
     hspace=0.4   
 )
 
-fig.savefig('lab2_float/plot.png', dpi = 300)
+fig.savefig('lab2_float/numerical_integration.png', dpi = 300)
 # plt.show()
